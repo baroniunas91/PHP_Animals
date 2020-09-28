@@ -1,0 +1,56 @@
+body form {
+    display: flex;
+    flex-direction: column;
+}
+body form button{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: lightslategray;
+    font-size: 16px;
+}
+body form button:hover{
+    transition-duration: 0.4s;
+    background-color: blue;
+    color: white;
+    box-shadow: 0px 5px 10px #888888;
+}
+    body form img{
+        width: 300px;
+    }
+    body form .block {
+        display: flex;
+        margin-bottom: 40px;
+    }
+    body form .block > div{
+        margin-left: 20px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+        body form .block > div h2{
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        body form .block > div > div{
+            margin: 5px 0;
+            display: flex;
+        }
+            body form .block > div > div label{
+                padding: 5px 20px;
+                background-color: lightslategray;
+                width: 70px;
+                height: 20px;
+                text-align: center;
+                border-radius: 6px;
+            }
+            body form .block > div > div input{
+                display: none;
+            }
+            body form .block > div > div input:checked+label{
+                transition-duration: 0.4s;
+                background-color: blue;
+                color: white;
+                box-shadow: 0px 5px 10px #888888;
+            }
