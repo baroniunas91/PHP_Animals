@@ -17,7 +17,31 @@
         $rez = 0;
         $ats = [];
         $optionsCount = count($goodAnswers);
+        if (count($_GET) - 1 != $optionsCount) {
+            if (!isset($_GET['test'])) {
+                $ats[] = '';
+            } else {
+                $ats[] = $_GET['test'];
+            }
 
+            if (!isset($_GET['test2'])) {
+                $ats[] = '';
+            } else {
+                $ats[] = $_GET['test2'];
+            }
+
+            if (!isset($_GET['test3'])) {
+                $ats[] = '';
+            } else {
+                $ats[] = $_GET['test3'];
+            }
+
+            if (!isset($_GET['test4'])) {
+                $ats[] = '';
+            } else {
+                $ats[] = $_GET['test4'];
+            }
+        }
         foreach ($_GET as $key => $value) {
             if ($key != 'submit') {
                 $ats[] = $value;
@@ -60,10 +84,14 @@
                     </div>
                 <?php
                 } else {
-                    if ('elnias' == $_GET['test']) {
-                        echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                    if (isset($_GET['test'])) {
+                        if ('elnias' == $_GET['test']) {
+                            echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                        } else {
+                            echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        }
                     } else {
-                        echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        echo "<p style=\"color: red;\">Jūs nieko nepasirinkote!</p>";
                     }
                 }
                 ?>
@@ -95,10 +123,14 @@
                     </div>
                 <?php
                 } else {
-                    if ('suo' == $_GET['test2']) {
-                        echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                    if (isset($_GET['test2'])) {
+                        if ('suo' == $_GET['test2']) {
+                            echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                        } else {
+                            echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        }
                     } else {
-                        echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        echo "<p style=\"color: red;\">Jūs nieko nepasirinkote!</p>";
                     }
                 }
                 ?>
@@ -130,10 +162,14 @@
                     </div>
                 <?php
                 } else {
-                    if ('katinas' == $_GET['test3']) {
-                        echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                    if (isset($_GET['test3'])) {
+                        if ('katinas' == $_GET['test3']) {
+                            echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                        } else {
+                            echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        }
                     } else {
-                        echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        echo "<p style=\"color: red;\">Jūs nieko nepasirinkote!</p>";
                     }
                 }
                 ?>
@@ -165,10 +201,14 @@
                     </div>
                 <?php
                 } else {
-                    if ('begemotas' == $_GET['test4']) {
-                        echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                    if (isset($_GET['test4'])) {
+                        if ('begemotas' == $_GET['test4']) {
+                            echo "<p style=\"color: green;\">Jūsų atsakymas teisingas!</p>";
+                        } else {
+                            echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        }
                     } else {
-                        echo "<p style=\"color: red;\">Jūsų atsakymas neteisingas!</p>";
+                        echo "<p style=\"color: red;\">Jūs nieko nepasirinkote!</p>";
                     }
                 }
                 ?>
